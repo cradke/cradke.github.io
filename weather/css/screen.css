@@ -1,4 +1,142 @@
 /*This is for the weather site and screened devices*/
 
+/* *****************************************************
+* CSS Table of Contents
+* 1. Imports
+* 2. General Styles
+* 3. Mobile Styles
+* 4. Large Screen Styles
+***************************************************** */
+
+
+
+/* *****************************************************
+* 1. Imports
+***************************************************** */
 /*This sets the font to Sansita*/
 @import url('https://fonts.googleapis.com/css?family=Sansita');
+
+/*Import the Normailze stylesheet*/
+@import url('normalize.css');
+
+
+/* *****************************************************
+* 2. General Styles
+***************************************************** */
+* {
+    box-sizing: border-box; /* changes width property
+    to total width instead of content width */
+}
+*:before, *:after{
+    box-sizing: border-box;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figcaption,
+figure {
+    display: block; /* just in case we have
+    any older browsers that don't recognize
+    the HTML5 semantic elements */
+    border-radius: 25px;
+}
+
+body {
+    margin: 0; /* remove any margin from body */
+    padding: 0; /* ditto for padding */
+    font-family: helvetica, arial, sans-serif;
+    font-size: 20px;
+}
+
+/* make search bar horizontal */
+ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+header {
+    /* header background color */
+    background-color: #d8f;
+}
+
+nav {
+    /* move nav bar to the bottom on the screen */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* nav background color */
+    background-color: #6c4ddb;
+}
+
+/* change link colors */
+nav a:link {
+    text-decoration: none;
+    color: #FFF;
+}
+nav a:visited {
+    color: blue;
+}
+nav a:hover {
+    color: darkcyan
+}
+nav a:active {
+    color: brown
+}
+
+footer{
+    /* leave space below the nav bar value was
+    initially 2 but 4 seems to work better. */
+    margin-bottom: 4em;
+    /* footer background color */
+    background-color: #d8f;
+
+}
+
+/* increases font size of the site brand */
+#site-brand {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* make the logo larger */
+#logo {
+    float: left;
+    font-size:2em;
+}
+
+/* border and background for smallConditions */
+#smallConditions {
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+/* border and background for video */
+#video {
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+/* change header font type for all headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Sansita, Helvetica, sans-serif;
+}
+
+#curWeather{
+    /* site background image */
+    background-image: url("/weather/images/sunny-winter.jpg");
+    background-size: cover;
+}

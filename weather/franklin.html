@@ -5,47 +5,62 @@
 <title>Franklin, ID | Weather Site</title>
 <meta name="description" content="franklin Idaho weather information">
 <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet"
+          href="/weather/css/screen.css" type="text/css"
+          media="screen">
 </head>
 <body>
-    <header>
-        <img src = "images/logo.jpeg" alt = "site logo">
-        <h1>The Weather Site</h1>
+    <header id="page-header">
+        <div id="logo">&#9748;</div>
+        <p id="site-brand">The Weather Site</p>
+    </header>
+
+    <nav>
         <ul>
+            <li><a href="https://cradke.github.io/" title="home">Home</a></li>
             <li><a href="" title="current weather">Current</a></li>
             <li><a href="" title="search">Search</a></li>
             <li><a href="" title="franklin">Franklin</a></li>
             <li><a href="" title="greenville">Greenville</a></li>
             <li><a href="" title="springfield">Springfield</a></li>
         </ul>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="https://cradke.github.io/" title="home">Home</a></li>
-        </ul>
     </nav>
 
     <main>
-        <h2>Franklin, Idaho</h2>
-        <p><b>Zip:</b>83237   |<b>Elevation:</b>4501ft.   |<b>Location:</b>42.0135°N, 111.8072°W</p>
+        <h1>Franklin, Idaho</h1>
+        <section id="locationInfo">
+            <p><b>Zip:</b>83237   |<b>Elevation:</b>4501ft.   |<b>Location:</b>42.0135°N, 111.8072°W</p>
+        </section>
 
-        <h3>Temperature</h3>
-        <p>24°F</p>
-        <p>34F 21F</p>
-        <p>Feels Like 21F</p>
+        <div id="curWeather">
+            <div id="smallConditions">
+                <section id="Temps">
+                    <h3>Temperature</h3>
+                    <p>24°F</p>
+                    <p>34F 21F</p>
+                    <p>Feels Like 21F</p>
+                </section>
 
-        <h3>Wind</h3>
-        <p>N</p>
-        <p>2 mph</p>
-        <p><b>Direction: </b>NW</p>
-        <p><b>Gusts: </b>5mph</p>
+                <section id="wind">
+                    <h3>Wind</h3>
+                    <p>N</p>
+                    <p>2 mph</p>
+                    <p><b>Direction: </b>NW</p>
+                    <p><b>Gusts: </b>5mph</p>
+                </section>
 
+            </div>
+            <section id="video">
         <h3>Video Forcast</h3>
         <!--Insert video here-->
+            </section>
 
+        </div>
+        <section id="hourly">
         <p><b>Hourly Forecast</b></p>
         <p>12am: 21F | 1am: 21F | 2am: 21F | 3am: 20F | 4am:20F | 5am:20F |
         6am: 20F | 7am: 21F | 8am: 21F</p>
+        </section>
 
     </main>
     <footer>
