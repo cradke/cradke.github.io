@@ -145,6 +145,12 @@ h6 {
     font-size: 4em;
     margin: 0;
 }
+
+#highAndLow{
+    display: flex;
+    flex-direction: column;
+}
+
 /* Change high temperature color to red */
 #highTemp{
     color:red;
