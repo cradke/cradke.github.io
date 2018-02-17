@@ -55,13 +55,13 @@ body {
 
 /* make search bar horizontal */
 ul li {
-    display: inline-block;
+    display: inline;
     list-style: none;
 }
 
 header {
     /* header background color */
-    background-color: #d8f;
+    background-color: #6c4ddb;
 }
 
 nav {
@@ -90,10 +90,10 @@ nav a:active {
 
 footer{
     /* leave space below the nav bar value was
-    initially 2 but 4 seems to work better. */
-    margin-bottom: 4em;
+    initially 2 but 5 seems to work better. */
+    margin-bottom: 5em;
     /* footer background color */
-    background-color: #d8f;
+    background-color: #6c4ddb;
 
 }
 
@@ -139,4 +139,40 @@ h6 {
     /* site background image */
     background-image: url("/weather/images/sunny-winter.jpg");
     background-size: cover;
+}
+
+
+/* Increase font size and reduce margin of current temperature */
+#currentTemp{
+    font-size: 4em;
+    margin: 0;
+}
+/* Change high temperature color to red */
+#highTemp{
+    color:red;
+}
+
+/* Change low temperature color to blue */
+#lowTemp{
+    color:blue;
+}
+
+/* Make current temperature and wind conditions horizontal */
+#smallConditions{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* *****************************************************
+* 3. Mobile Styles
+***************************************************** */
+
+/* Get rid of hourly temperatures */
+#hourly{
+    display: none;
+}
+
+/* Do not display h3 headers */
+h3{
+    display: none;
 }
