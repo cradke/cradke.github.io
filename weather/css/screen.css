@@ -8,15 +8,13 @@
 * 4. Large Screen Styles
 ***************************************************** */
 
-
-
 /* *****************************************************
 * 1. Imports
 ***************************************************** */
 /*This sets the font to Sansita*/
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 
-/*Import the Normailze stylesheet*/
+/*Import the Normalize stylesheet*/
 @import url('normalize.css');
 
 
@@ -166,7 +164,6 @@ h6 {
 /* *****************************************************
 * 3. Mobile Styles
 ***************************************************** */
-
 /* Get rid of hourly temperatures */
 #hourly{
     display: none;
