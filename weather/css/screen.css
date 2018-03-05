@@ -162,13 +162,21 @@ h6 {
     justify-content: space-between;
 }
 
+ul li p{
+    display: inline;
+    list-style: none;
+}
+
+#hourly{
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
 /* *****************************************************
 * 3. Mobile Styles
 ***************************************************** */
-/* Get rid of hourly temperatures */
-#hourly{
-    display: none;
-}
 
 /* Do not display h3 headers */
 h3{
@@ -188,11 +196,15 @@ h3{
 /* *****************************************************
 * 4. Large Screens
 ***************************************************** */
-@media screen and (minwidth: 760px){
+@media screen and (min-width: 760px){
 /*    Center the content on the screen*/
     body>div{
         max-width: 1100px;
         margin: 0 auto;
+    }
+
+    #curWeather{
+        display: flex;
     }
 
 }
