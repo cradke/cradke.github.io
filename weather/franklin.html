@@ -31,7 +31,7 @@
             <p><b>Zip:</b>83237   |<b>Elevation:</b>4501ft.   |<b>Location:</b>42.0135°N, 111.8072°W</p>
         </section>
 
-        <div id="curWeather">
+        <div id="curWeather" class="rain">
             <div id="smallConditions">
                 <section id="Temps">
                     <h3>Temperature</h3>
@@ -42,13 +42,13 @@
                             <li><p id="lowTemp">21F</p></li>
                         </ul>
                     </section>
-                    <p>Feels Like 21F</p>
+                    <p id="feelTemp">Feels Like 21F</p>
                 </section>
 
                 <section id="wind">
                     <h3>Wind</h3>
                     <p>N</p>
-                    <img src="weather-images/wind-pointer.png" alt="Windo Pointer" id="dial">
+                    <div id="dial" class="w"></div>
                     <p>2 mph</p>
                     <p><b>Direction: </b>NW</p>
                     <p><b>Gusts: </b>5mph</p>
@@ -87,7 +87,7 @@
                 <li><p>8pm: 33F | </p></li>
                 <li><p>9pm: 33F | </p></li>
                 <li><p>10pm: 31F | </p></li>
-                <li><p>11pm: 31F | </p></li>
+                <li><p>11pm: 31F</p></li>
             </ul>
         </section>
 
@@ -95,5 +95,7 @@
     <footer>
         &copy;2018 The Weather Site
     </footer>
+    <script src="js/functions.js"></script>
+
 </body>
 </html>
