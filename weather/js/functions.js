@@ -5,9 +5,9 @@
 
 //Variables for Function Use
 const temp = 31;
-const speed = 5;
-const direction = "North"; //Set your own value
-let weather = "blizzard";
+const speed = 10;
+const direction = "NW"; //Set your own value
+let weather = "rain";
 // Call Wind Chill Function
 buildWC(speed, temp);
 windDial(direction);

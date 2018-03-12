@@ -177,8 +177,8 @@ ul li p{
 #dial {
     height: 150px;
     width: 150px;
-    background: no-repeat center/85% url('/weather-images/wind-pointer');
-    z-index: 100;
+    background: no-repeat center/85% url('/weather/weather-images/wind-pointer.png');
+    z-index: 101;
     margin: -.6em auto 0;
 }
 
@@ -276,6 +276,6 @@ h3{
         /* site background image */
         background-size: cover;
     }
-
+f
 
 }
