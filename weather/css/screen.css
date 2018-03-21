@@ -208,6 +208,10 @@ ul li p{
     transform: rotate(270deg);
 }
 
+.hide{
+    display: none;
+}
+
 
 /* *****************************************************
 * 3. Mobile Styles
@@ -276,6 +280,9 @@ h3{
         /* site background image */
         background-size: cover;
     }
-f
+
+    h3 {
+        display:flex;
+    }
 
 }

@@ -4,16 +4,17 @@
 // console.log('My javascript is being read.');
 
 //Variables for Function Use
-const temp = 31;
-const speed = 10;
-const direction = "NW"; //Set your own value
-let weather = "rain";
+//const temp = 31;
+//const speed = 10;
+//const direction = "N"; //Set your own value
+//let weather = "rain";
 // Call Wind Chill Function
-buildWC(speed, temp);
-windDial(direction);
-const condition = getCondition(weather);
-console.log(condition);
-changeSummaryImage(condition);
+//buildWC(speed, temp);
+//windDial(direction);
+//const condition = getCondition(weather);
+//console.log(condition);
+//changeSummaryImage(condition);
+
 
 // Calculate wind chill temperature
 function buildWC(speed, temp) {
@@ -130,4 +131,81 @@ function changeSummaryImage(condition){
             curWeather.setAttribute("class", "snow");
             break;
     }
+}
+
+// Get Data from API
+function getData(LOCALE) {
+    const WU_API_KEY = 'd11c9a416ad5a2b9';
+    const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/q/" + LOCALE + ".json";
+    fetch(URL)
+        .then(response => response.json())
+        .then(function (data) {
+        console.log('Json object from getData function:');
+        console.log(data);
+        displayData(data);
+    })
+        .catch(error => console.log('There was an error: ', error))
+} // end getData function
+
+function displayData(data) {
+    // Populate the current location weather page
+    const TEMP = data.current_observation.temp_f;
+    console.log(TEMP);
+
+    const SPEED = data.current_observation.wind_mph;
+    console.log(SPEED);
+
+    const DIRECTION = data.current_observation.wind_dir;
+    console.log(DIRECTION);
+
+    const WEATHER = data.current_observation.weather;
+    console.log("weather " + WEATHER);
+
+
+    // Task 1 - Feed data to WC, Dial and Image functions
+    buildWC(SPEED, TEMP);
+
+    windDial(DIRECTION);
+
+    const CONDITION = getCondition(WEATHER);
+    console.log("condition " + CONDITION);
+
+    changeSummaryImage(CONDITION);
+
+        // Task 2 - Populate location information
+    const CITY = data.current_observation.display_location.full;
+    console.log(CITY);
+    city.innerHTML = CITY;
+
+    const ZIP = data.current_observation.display_location.zip;
+    console.log(ZIP);
+    zip.innerHTML = ZIP;
+
+    const ELEVATION = data.current_observation.display_location.elevation;
+    console.log(ELEVATION);
+    elevation.innerHTML = ELEVATION + "ft.";
+
+    const LATITUDE = data.current_observation.display_location.latitude;
+    const LONGITUDE = data.current_observation.display_location.longitude;
+    console.log(LATITUDE + LONGITUDE);
+    a.innerHTML = LATITUDE + " " + LONGITUDE;
+
+    currentTemp.innerHTML = Math.round(TEMP) + "°F";
+
+    windSpeed.innerHTML = SPEED + " mph";
+
+    windD.innerHTML = DIRECTION;
+
+    const GUST = data.current_observation.wind_gust_mph;
+    console.log(GUST);
+    gusts.innerHTML = GUST + " mph";
+
+    videoHeading.innerHTML = WEATHER;
+
+
+
+
+        // Task 3 - Populate weather information (including the wunderground logo and text in footer)
+
+        // Task 4 - Hide status and show main
 }

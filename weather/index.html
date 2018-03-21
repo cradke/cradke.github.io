@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Franklin, ID | Weather Site</title>
+        <meta name="description" content="current location weather information">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet"
+              href="/weather/css/screen.css" type="text/css"
+              media="screen">
+    </head>
+    <body>
+        <header id="page-header">
+            <div id="logo">&#9748;</div>
+            <p id="site-brand">The Weather Site</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="https://cradke.github.io/" title="home">Home</a></li>
+                <li><a href="" title="search">Search</a></li>
+                <li><a href="index.html" title="current weather">Current</a></li>
+                <li><a href="franklin.html" title="franklin">Franklin</a></li>
+                <li><a href="greenville.html" title="greenville">Greenville</a></li>
+                <li><a href="" title="springfield">Springfield</a></li>
+            </ul>
+        </nav>
+
+        <p id="status"></p>
+
+        <main id="main">
+            <h1 id="city">city</h1>
+            <section id="locationInfo">
+                <ul>
+                    <li><p><b>Zip:</b></p><p id="zip">zip</p></li>
+                    <li><p>|<b>Elevation:</b></p><p id="elevation">elevation</p></li>
+                    <li><p>|<b>Location:</b></p><p id="a">location</p></li>
+
+                </ul>
+            </section>
+
+            <div id="curWeather" class="rain">
+                <div id="smallConditions">
+                    <section id="Temps">
+                        <h3>Temperature</h3>
+                        <p id="currentTemp">24°F</p>
+                        <section id="highandLow">
+                            <ul>
+                                <li><p id="highTemp">34F</p></li>
+                                <li><p id="lowTemp">21F</p></li>
+                            </ul>
+                        </section>
+                        <p id="feelTemp">Feels Like 21F</p>
+                    </section>
+
+                    <section id="wind">
+                        <h3>Wind</h3>
+                        <p>N</p>
+                        <div id="dial" class="w"></div>
+                        <p id="windSpeed">2 mph</p>
+                        <p><b>Direction: </b></p><p id="windD">Direction</p>
+                        <p><b>Gusts: </b></p>
+                        <p id="gusts">gusts</p>
+                    </section>
+
+                </div>
+                <section id="video">
+                    <h3 id="videoHeading">Video Forecast</h3>
+                    <img src=http://icons.wxug.com/i/c/k/nt_clear.gif alt="Video Icon">
+                </section>
+
+            </div>
+            <section id="hourly">
+                <p><b>Hourly Forecast</b></p>
+                <ul>
+                    <li><p>12am: 21F | </p></li>
+                    <li><p>1am: 21F | </p></li>
+                    <li><p>2am: 20F | </p></li>
+                    <li><p>3am: 20F | </p></li>
+                    <li><p>4am: 20F | </p></li>
+                    <li><p>5am: 20F | </p></li>
+                    <li><p>6am: 20F | </p></li>
+                    <li><p>7am: 21F | </p></li>
+                    <li><p>8am: 25F | </p></li>
+                    <li><p>9am: 28F | </p></li>
+                    <li><p>10am: 30F | </p></li>
+                    <li><p>11am: 34F | </p></li>
+                    <li><p>12pm: 35F | </p></li>
+                    <li><p>1pm: 37F | </p></li>
+                    <li><p>2pm: 38F | </p></li>
+                    <li><p>3pm: 39F | </p></li>
+                    <li><p>4pm: 39F | </p></li>
+                    <li><p>5pm: 38F | </p></li>
+                    <li><p>6pm: 36F | </p></li>
+                    <li><p>7pm: 34F | </p></li>
+                    <li><p>8pm: 33F | </p></li>
+                    <li><p>9pm: 33F | </p></li>
+                    <li><p>10pm: 31F | </p></li>
+                    <li><p>11pm: 31F</p></li>
+                </ul>
+            </section>
+
+        </main>
+        <footer>
+            &copy;2018 The Weather Site
+        </footer>
+        <script src="js/functions.js"></script>
+        <script src="js/geo_loc.js"></script>
+
+    </body>
+</html>
