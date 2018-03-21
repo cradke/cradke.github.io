@@ -203,9 +203,10 @@ function displayData(data) {
     videoHeading.innerHTML = WEATHER;
 
 
-
-
-        // Task 3 - Populate weather information (including the wunderground logo and text in footer)
-
         // Task 4 - Hide status and show main
+    document.getElementById("main").className = "show";
+    document.getElementById("status").className = "hide";
+
+
+
 }
