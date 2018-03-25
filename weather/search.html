@@ -26,6 +26,14 @@
             </ul>
         </nav>
 
+        <section>
+            <form method="get" action="https://wunderground.com/" id="searchform">
+                <input type="search" name="query" id="query">
+                <input type="submit" name="submit" value="Search" id="send">
+            </form>
+            <div id="searchResults"></div>
+        </section>
+
         <p id="status"></p>
 
         <main id="main" class="hide">
@@ -107,7 +115,7 @@
                 <img src="http://icons.wxug.com/graphics/wu2/logo_130x80.png" alt="Weather Underground"></a>
         </footer>
         <script src="js/functions.js"></script>
-        <script src="js/geo_loc.js"></script>
+        <script src="js/search.js"></script>
 
     </body>
     <!--Collaborators: Micach Clegg, Emily-->

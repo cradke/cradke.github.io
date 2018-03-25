@@ -136,7 +136,7 @@ function changeSummaryImage(condition){
 // Get Data from API
 function getData(LOCALE) {
     const WU_API_KEY = 'd11c9a416ad5a2b9';
-    const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/q/" + LOCALE + ".json";
+    const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/forecast/hourly/q/" + LOCALE + ".json";
     fetch(URL)
         .then(response => response.json())
         .then(function (data) {
@@ -171,6 +171,11 @@ function displayData(data) {
     console.log("condition " + CONDITION);
 
     changeSummaryImage(CONDITION);
+
+    const HIGH = data.forecast.simpleforecast.forecastday[0].high.fahrenheit;
+    console.log("highTemp" + HIGH);
+    highTemp.innerHTML = HIGH + "°F";
+
 
         // Task 2 - Populate location information
     const CITY = data.current_observation.display_location.full;
