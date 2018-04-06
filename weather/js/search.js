@@ -47,9 +47,10 @@ searchResults.onclick = function(event) {
     console.log("Link has been clicked");
 
     // Get location data from link
-    const DATA = json.RESULTS[0].name;
-    console.log(DATA);
-
+    let target = event.target.dataset.location;
+    event.preventDefault();
+    
+    getData(target);
 
 
 }

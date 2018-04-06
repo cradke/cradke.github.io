@@ -24,6 +24,8 @@
 * {
     box-sizing: border-box; /* changes width property
     to total width instead of content width */
+
+    font-family: 'Acme', sans-serif;
 }
 *:before, *:after{
     box-sizing: border-box;

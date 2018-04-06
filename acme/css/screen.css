@@ -1,0 +1,220 @@
+/*This is for the ACME site and screened devices*/
+
+/* *****************************************************
+* CSS Table of Contents
+* 1. Imports
+* 2. General Styles
+* 3. Mobile Styles
+* 4. Large Screen Styles
+***************************************************** */
+
+/**************************************************
+* 1. Imports
+**************************************************/
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+
+/**************************************************
+* 2. General Styles
+**************************************************/
+body {
+    /* Site Background Image */
+    background-image: url(/acme/images/site/background.jpg);
+    background-size: cover;
+
+    /* Set typecface for the webpage */
+    font-family: 'Acme', sans-serif;
+}
+
+#wrapper {
+    /* Set white background behind content */
+    background-color: #ffffff;
+}
+
+hr {
+    /* Close space betweeen line and rights */
+    margin: -1px;
+}
+
+#fairUse {
+    /* Close space between fair use policy and rights */
+    margin-top: -1px
+}
+
+#navBar {
+    /* No bullet points */
+    list-style: none;
+
+    /* Set red background */
+    background-color: #de2226;
+
+    /* Change text color to white */
+    color: #ffffff;
+}
+
+#navLinks {
+    /* Position the links in the navBar */
+    display: flex;
+    margin-left: -30px;
+}
+
+.navButton{
+    /* Add space inbetween navBar buttons */
+    padding-right: 10px;
+}
+
+#rocketInfo{
+    /* Rocket Image */
+    background-image: url(/acme/images/site/feature.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Text Settings */
+    list-style: none;
+
+    /* Change text color to red purple */
+    color: #990033;
+}
+
+.recipeImg{
+    /* Add grey background behind recipe images */
+    background-color: #808080;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+footer{
+    /* Center the text in the footer */
+    text-align: center;
+}
+
+
+/**************************************************
+* 3. Mobile Styles
+**************************************************/
+#actionbtn{
+    /* reduce the size of the action button */
+    width: 40vw;
+}
+
+#content{
+    /* Position content correctly */
+    margin-left: 120px;
+
+    /* Decrease font size */
+    font-size: 70%;
+
+    /* Padding is necessary to display the entire image */
+    padding-bottom: 50px;
+
+    /* Transparent background */
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#itemHeading{
+    /* Close gap between heading and text */
+    margin-bottom: -2px;
+}
+
+#reviews{
+    /* reduce font size of the reviews */
+    font-size: 70%;
+}
+
+#recipes{
+    /* Remove bullet points from recipe text */
+    list-style: none;
+
+    /* Reduce font size */
+    font-size: 70%;
+
+    /* Position recipes on wepage */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: -35px;
+}
+
+footer{
+    /* Reduce font size in footer */
+    font-size: 70%;
+}
+/**************************************************
+* 4. Large Screen Styles
+**************************************************/
+@media screen and (min-width: 760px){
+
+    .navButton{
+        /* Add space inbetween navBar buttons */
+        padding-right: 25px;
+    }
+
+    #wrapper{
+        margin: 0 3vw;
+    }
+
+    #rocketInfo{
+        /* Increase font size */
+        font-size: 215%;
+    }
+
+    #actionbtn{
+        width: auto;
+    }
+
+    #content{
+        /* padding is necesary to display the entire image */
+        padding-bottom: 400px;
+
+        /* Increase text to normal size */
+        font-size: 100%;
+
+        /* Place text and button in correct place */
+        margin-top: 25px;
+        margin-left: 775px;
+
+        /* Get rid of background */
+        background-color: transparent;
+    }
+
+    #actionbtn{
+        /* Make action button bigger */
+        width: 30vw;
+    }
+
+    #lower{
+        /* Make recipe and reviews horizontal */
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+    #reviews{
+        /* Increase review text size */
+        font-size: 100%;
+    }
+
+    #featuredRecipes{
+        /* Display recipe header above images */
+        display: flex;
+        flex-direction:column;
+    }
+
+    #recipes{
+        font-size: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .recipeImg{
+        /* Add grey background behind recipe images */
+        background-color: #808080;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        width: 10vw;
+    }
+
+}
