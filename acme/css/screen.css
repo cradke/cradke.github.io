@@ -74,6 +74,10 @@ hr {
 
     /* Change text color to red purple */
     color: #990033;
+
+    /* Display text and action button on right side of picture */
+    display: flex;
+    justify-content:flex-end;
 }
 
 .recipeImg{
@@ -98,9 +102,6 @@ footer{
 }
 
 #content{
-    /* Position content correctly */
-    margin-left: 120px;
-
     /* Decrease font size */
     font-size: 70%;
 
@@ -109,8 +110,8 @@ footer{
 
     /* Transparent background */
     background: rgba(255, 255, 255, 0.5);
-}
 
+}
 #itemHeading{
     /* Close gap between heading and text */
     margin-bottom: -2px;
@@ -144,18 +145,27 @@ footer{
 **************************************************/
 @media screen and (min-width: 760px){
 
+    #rocketInfo{
+        /* Rocket Image */
+        background-image: url(/acme/images/site/feature.jpg);
+        background-repeat: no-repeat;
+        background-size: auto;
+
+        /* Text Settings */
+        list-style: none;
+
+        /* Change text color to red purple */
+        color: #990033;
+    }
+
+
     .navButton{
         /* Add space inbetween navBar buttons */
         padding-right: 25px;
     }
 
     #wrapper{
-        margin: 0 3vw;
-    }
-
-    #rocketInfo{
-        /* Increase font size */
-        font-size: 215%;
+        margin: 0 17vw;
     }
 
     #actionbtn{
@@ -163,15 +173,14 @@ footer{
     }
 
     #content{
+        /* Move text and button away from picture's edge */
+        margin-right: 5px;
+
         /* padding is necesary to display the entire image */
-        padding-bottom: 400px;
+        padding-bottom: 200px;
 
         /* Increase text to normal size */
-        font-size: 100%;
-
-        /* Place text and button in correct place */
-        margin-top: 25px;
-        margin-left: 775px;
+        font-size: 120%;
 
         /* Get rid of background */
         background-color: transparent;
@@ -179,7 +188,8 @@ footer{
 
     #actionbtn{
         /* Make action button bigger */
-        width: 30vw;
+        width: auto;
+
     }
 
     #lower{
@@ -211,10 +221,14 @@ footer{
     .recipeImg{
         /* Add grey background behind recipe images */
         background-color: #808080;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 36px;
+        padding-right: 36px;
 
-        width: 10vw;
+        width: 8vw;
+    }
+
+    footer{
+        font-size: 100%;
     }
 
 }
