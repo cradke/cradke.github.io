@@ -50,18 +50,17 @@ hr {
 
     /* Change text color to white */
     color: #ffffff;
-}
 
-#navLinks {
-    /* Position the links in the navBar */
     display: flex;
-    margin-left: -30px;
+
 }
 
-.navButton{
-    /* Add space inbetween navBar buttons */
-    padding-right: 10px;
+.navLinks {
+    /* Position the links in the navBar */
+    margin-left: -30px;
+    padding-right: 20px;
 }
+
 
 #rocketInfo{
     /* Rocket Image */
@@ -85,6 +84,12 @@ hr {
     background-color: #808080;
     padding-left: 40px;
     padding-right: 40px;
+}
+
+hr{
+    height: 5px;
+    background-color: black;
+
 }
 
 footer{
