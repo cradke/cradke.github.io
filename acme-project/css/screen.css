@@ -19,7 +19,7 @@
 **************************************************/
 body {
     /* Site Background Image */
-    background-image: url(/acme/images/site/background.jpg);
+    background-image: url(/acme-project/images/site/background.jpg);
     background-size: cover;
 
     /* Set typecface for the webpage */
@@ -61,10 +61,15 @@ hr {
     padding-right: 20px;
 }
 
+.navButton{
+    /* Add space inbetween navBar buttons */
+    padding-right: 25px;
+}
+
 
 #rocketInfo{
     /* Rocket Image */
-    background-image: url(/acme/images/site/feature.jpg);
+    background-image: url(/acme-project/images/site/feature.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -95,6 +100,15 @@ hr{
 footer{
     /* Center the text in the footer */
     text-align: center;
+}
+
+.hide{
+    display: none;
+}
+
+#itemInfo{
+    /* Get rid of bullet points on item content */
+    list-style: none;
 }
 
 
@@ -145,6 +159,11 @@ footer{
     /* Reduce font size in footer */
     font-size: 70%;
 }
+
+#image {
+    width: 70%;
+}
+
 /**************************************************
 * 4. Large Screen Styles
 **************************************************/
@@ -152,7 +171,7 @@ footer{
 
     #rocketInfo{
         /* Rocket Image */
-        background-image: url(/acme/images/site/feature.jpg);
+        background-image: url(/acme-project/images/site/feature.jpg);
         background-repeat: no-repeat;
         background-size: auto;
 
@@ -161,12 +180,6 @@ footer{
 
         /* Change text color to red purple */
         color: #990033;
-    }
-
-
-    .navButton{
-        /* Add space inbetween navBar buttons */
-        padding-right: 25px;
     }
 
     #wrapper{
@@ -235,5 +248,10 @@ footer{
     footer{
         font-size: 100%;
     }
+
+    #itemContent {
+        display: flex;
+    }
+
 
 }
