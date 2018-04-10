@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Acme | Roadrunner</title>
+    <title>Acme | Buy Here, Eat Roadrunner</title>
     <meta name="description" content="ACME products and services.">
     <meta name="viewport" content="width=device-width">
     <link href="/acme-project/css/screen.css" rel="stylesheet" type="text/css" media="screen">
@@ -52,7 +52,7 @@
 
 
                 <ul id="rocketInfo">
-                    <section id="content">
+                    <div id="content">
                         <li>
                             <h2 id="itemHeading">Acme Rocket</h2>
                         </li>
@@ -60,7 +60,7 @@
                         <li class="itemDescription">NHTSA approved seat belts</li>
                         <li class="itemDescription">Mobile launch stand included</li>
                         <li><a href="#"><img id="actionbtn" alt="Add to cart button" src="/acme-project/images/site/iwantit.gif"></a></li>
-                    </section>
+                    </div>
                 </ul>
 
 
@@ -98,16 +98,18 @@
             </nav>
 
             <!-- Dynamic content for anvils, explosives, decoys, and traps-->
-            <div id="itemContent" class="hide">
-                <img id="image" src="">
 
-                <ul id="itemInfo">
+            <div id="itemContent">
+                <img id="image" src="#" alt="itemImage" class="hide">
+
+                <ul id="itemInfo" class="hide">
                     <li><p id="description"> </p></li>
-                    <li><p id="manufacturer"> </p></li>
-                    <li><p id="price"> </p></li>
-                    <li><p id="itemReviews"> </p></li>
+                    <li><b>Made by: </b><span id="manufacturer"> </span></li>
+                    <li><b>Reviews: </b><span id="itemReviews"> </span></li>
+                    <li id="priceText">Price: <span id="price"> </span></li>
                 </ul>
             </div>
+
 
 
 

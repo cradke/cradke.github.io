@@ -102,7 +102,7 @@ footer{
     text-align: center;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
@@ -111,6 +111,11 @@ footer{
     list-style: none;
 }
 
+#priceText {
+    color: #de2226;
+
+    font-size: 2em;
+}
 
 /**************************************************
 * 3. Mobile Styles
@@ -252,6 +257,4 @@ footer{
     #itemContent {
         display: flex;
     }
-
-
 }

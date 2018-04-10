@@ -24,6 +24,12 @@ function hideContent(){
     document.getElementById("main").className = "hide";
 }
 
+// Display content on items
+function displayContent(){
+    document.getElementById("image").className = "show"
+    document.getElementById("itemInfo").className = "show"
+}
+
 home.onclick = function(event) {
     console.log("Home Link has been clicked");
 
@@ -31,6 +37,9 @@ home.onclick = function(event) {
     document.getElementById("main").className = "show";
     header.innerHTML = "Welcome to ACME!";
 
+    // Hide itemContent
+    document.getElementById("image").className = "hide"
+    document.getElementById("itemInfo").className = "hide"
 }
 
 anvils.onclick = function(event) {
@@ -75,6 +84,9 @@ function anvil(data) {
     //Display anvil reviews
     const REVIEWS = data.Anvils.reviews;
     itemReviews.innerHTML = REVIEWS;
+
+    // Display Content on screen
+    displayContent();
 }
 
 explosives.onclick = function(event) {
@@ -118,6 +130,9 @@ function explosive(data) {
     //Display anvil reviews
     const REVIEWS = data.Explosives.reviews;
     itemReviews.innerHTML = REVIEWS;
+
+    // Display Content on screen
+    displayContent();
 }
 
 
@@ -163,6 +178,9 @@ function decoy(data) {
     //Display anvil reviews
     const REVIEWS = data.Decoys.reviews;
     itemReviews.innerHTML = REVIEWS;
+
+    // Display Content on screen
+    displayContent();
 }
 
 traps.onclick = function(event) {
@@ -204,4 +222,7 @@ function trap(data) {
     //Display trap reviews
     const REVIEWS = data.Traps.reviews;
     itemReviews.innerHTML = REVIEWS;
+
+    // Display Content on screen
+    displayContent();
 }
