@@ -25,7 +25,7 @@ header {
 
 main {
     background-color: cadetblue;
-    text-align: center;
+    padding-top: 5px;
 }
 
 #navBar {
@@ -36,8 +36,8 @@ main {
 /**************************************************
 * 3. Mobile Styles
 **************************************************/
-#profileImg {
-    object-position: center;
+main {
+    text-align:center;
 }
 
 /**************************************************
@@ -49,13 +49,16 @@ main {
     }
     
     .navLinks {
-    margin-left: -30px;
+    margin-left: -20px;
     padding-right: 20px;
-    left
     }
 
     .navButtons {
     padding-right: 25px;
+    }
+    
+    main {
+        text-align: left;
     }
     
 }
