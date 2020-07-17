@@ -25,6 +25,7 @@ header {
 
 main {
     background-color: cadetblue;
+    text-align: center;
 }
 
 #navBar {
@@ -35,6 +36,9 @@ main {
 /**************************************************
 * 3. Mobile Styles
 **************************************************/
+#profileImg {
+    object-position: center;
+}
 
 /**************************************************
 * 4. Large Screen Styles
