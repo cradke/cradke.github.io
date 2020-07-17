@@ -19,6 +19,10 @@ body {
     background-color: darkblue;
 }
 
+header {
+    background-color: cadetblue
+}
+
 main {
     background-color: cadetblue;
 }
@@ -27,7 +31,7 @@ main {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    background-color: cadetblue;
+    background-color: beige;
     
 }
 /**************************************************
