@@ -19,7 +19,7 @@
 **************************************************/
 body {
     /* Site Background Image */
-    background-image: url(/acme-project/images/site/background.jpg);
+    background-image: url(../images/site/background.jpg);
     background-size: cover;
 
     /* Set typecface for the webpage */
@@ -69,7 +69,7 @@ hr {
 
 #rocketInfo{
     /* Rocket Image */
-    background-image: url(/acme-project/images/site/feature.jpg);
+    background-image: url(../images/site/feature.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -176,7 +176,7 @@ footer{
 
     #rocketInfo{
         /* Rocket Image */
-        background-image: url(/acme-project/images/site/feature.jpg);
+        background-image: url(../images/site/feature.jpg);
         background-repeat: no-repeat;
         background-size: auto;
 

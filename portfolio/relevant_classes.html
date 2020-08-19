@@ -3,10 +3,55 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Home | Carl Radke</title>
+    <title>Relevant Classes | Carl Radke</title>
     <meta name="description" content="Carl Radke Home">
     <meta name="viewport" content="width=device-width">
     <link href="css/page.css" rel="stylesheet" type="text/css" media="screen">
+
+    <style>
+        /* Style the buttons that are used to open and close the accordion panel */
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        /* Style the accordion panel. Note: hidden by default */
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+
+        .accordion:after {
+            content: '\02795';
+            /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2796";
+            /* Unicode character for "minus" sign (-) */
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -54,6 +99,88 @@
     </header>
 
     <main>
-        <p>relevant classes</p>
+        <button class="accordion">CIT160 - Introduction to Programming</button>
+        <div class="panel">
+            <p>This course is an introduction to the basic concepts of computers and information technology. Students will learn the basics of computer hardware and the binary and hexadecimal number systems, design algorithms to solve simple computing problems, and will write computer programs using Boolean logic, control structures, and functions.</p>
+        </div>
+
+        <button class="accordion">CIT260 - Object Oriented Programming</button>
+        <div class="panel">
+            <p>This course is an introduction to object oriented programming using the Java programming language. Students will write computer programs using primitive data types, control structures, Java Swing classes, and objects. Students will read and draw UML class diagrams and will use Java swing to write programs with a graphical user interface.</p>
+        </div>
+
+        <button class="accordion">CIT360 - Object Oriented Development</button>
+        <div class="panel">
+            <p>Students in this course use object-oriented concepts and technologies to develop client-server applications. These client-server applications will use technologies such as Java, Android, Android Room, Firebase Real-time Database, Hibernate, QCJSON, and servlets.</p>
+        </div>
+
+        <button class="accordion">CIT240 - Networking</button>
+        <div class="panel">
+            <p>This course teaches general networking principles to provide an understanding of data communication protocols, transmission systems, media, and software.</p>
+        </div>
+
+        <button class="accordion">CIT241 - Network Design I</button>
+        <div class="panel">
+            <p>This course teaches the principles of network standards and architectures that correspond to the Interconnecting Cisco Networking Devices Part 2 (ICND2) standard. Students will learn the configuration and use of networking devices and protocols including LAN switching technologies, IPv4 and IPv6 routing technologies, WAN technologies, infrastructure services, and infrastructure maintenance.</p>
+        </div>
+
+        <button class="accordion">CIT341 - Network Design II</button>
+        <div class="panel">
+            <p>This course focuses on advanced router configuration, Cisco IOS Software management, routing protocol configuration, TCP/IP and advanced routing protocols such as EIGRP and Frame Relay. Students will develop skills on how to configure a router, managing Cisco IOS Software, and configuring routing protocols on routers.</p>
+        </div>
+
+        <button class="accordion">CIT352 - Operating Systems I</button>
+        <div class="panel">
+            <p>This course provides a fundamental understanding of computer operating systems focusing on Linux.</p>
+        </div>
+
+        <button class="accordion">CIT353 - Operating Systems II</button>
+        <div class="panel">
+            <p>This course provides students with the administration skills to plan, install/configure, manage, and troubleshoot a Windows Server Environment.</p>
+        </div>
+
+        <button class="accordion">CIT270 - Systems Security I</button>
+        <div class="panel">
+            <p>The purpose of this course is to provide the student with an overview of the field of Cyber Security. Students will be exposed to the spectrum of Security activities, methods, methodologies, and procedures. This course offers a comprehensive guide for anyone wishing to take the CompTIA Security+ Certification Exam. It provides an introduction to the fundamentals of network security, including compliance and operational security; threats and vulnerabilities; application, data, and host security; access control and identity management; and cryptography. The course covers new topics in network security as well, including web application attacks, penetration testing, data loss prevention, cloud computing security and application programming development security.</p>
+        </div>
+
+        <button class="accordion">CIT470 - System Security II</button>
+        <div class="panel">
+            <p>The purpose of this lab based course is to teach students techniques for securing the entire network architecture both internally and externally. Students will learn how to configure and use firewalls and intrusion detection/prevention systems. In addition, students will learn how to harden operating systems and secure remote access.</p>
+        </div>
+
+        <button class="accordion">CIT111 - Introduction to Databases</button>
+        <div class="panel">
+            <p>This course covers the basic elements of database management systems. It introduces students to the concepts of logical and physical relationships in a data model and the concepts of inner and outer joins. Students will use a computer aided software engineering (CASE) tool to design, create, and query a database.</p>
+        </div>
+
+        <button class="accordion">CIT225 - Database Design & Development</button>
+        <div class="panel">
+            <p>The course deals with concepts and principles of database theory, application and management technologies. It focuses on the logical and physical database design and implementation. The course covers the use of UML semantic to describe Entity Relationship Designs (ERDs) and SQL to implement relationships between entities. SQL will be used to query and transact against a sample database.</p>
+        </div>
     </main>
-</body></html>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>
