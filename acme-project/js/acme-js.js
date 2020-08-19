@@ -46,7 +46,7 @@ anvils.onclick = function(event) {
     console.log("Anvils has been clicked");
     hideContent();
 
-    const URL = "js/acme.json";
+    const URL = "/acme-project/js/acme.json";
     fetch(URL)
         .then(response => response.json())
         .then(function (data) {
