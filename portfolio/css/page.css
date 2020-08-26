@@ -26,6 +26,7 @@ header {
 main {
     background-color: cadetblue;
     padding-top: 5px;
+    padding-bottom: 5px;
     color: aliceblue;
 }
 
@@ -56,7 +57,7 @@ p {
 * 3. Mobile Styles
 **************************************************/
 main {
-    text-align:center;
+    text-align: center;
 }
 
 /**************************************************
@@ -78,6 +79,15 @@ main {
     
     main {
         text-align: left;
+    }
+    
+    #intro {
+        display: flex;
+    }
+    
+    #introText {
+        padding-left: 10px;
+        padding-right: 10px;
     }
     
 }
