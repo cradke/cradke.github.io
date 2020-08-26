@@ -16,7 +16,7 @@
 * 2. General Styles
 **************************************************/
 body {
-    background-color: darkblue;
+    background-color: #c2f2f1;
 }
 
 header {
@@ -26,12 +26,31 @@ header {
 main {
     background-color: cadetblue;
     padding-top: 5px;
+    color: aliceblue;
 }
 
 #navBar {
     list-style: none;
-    background-color: beige;
+    background-color: burlywood;
 }
+
+.navButtons {
+    color: brown;
+}
+
+h1 {
+    color: blanchedalmond;
+}
+
+h2 {
+    color: blanchedalmond;
+}
+
+p {
+     color: blanchedalmond;
+}
+
+
 
 /**************************************************
 * 3. Mobile Styles
