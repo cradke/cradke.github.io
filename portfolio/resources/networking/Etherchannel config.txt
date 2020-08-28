@@ -1,0 +1,122 @@
+******************************************************
+* SWITCH 1
+******************************************************
+DenverS1#show etherchannel port-channel
+                Channel-group listing:
+                ----------------------
+
+Group: 1
+----------
+                Port-channels in the group:
+                ---------------------------
+
+Port-channel: Po1    (Primary Aggregator)
+
+------------
+
+Age of the Port-channel   = 06d:21h:57m:08s
+Logical slot/port   = 1/0          Number of ports = 2
+HotStandBy port = null
+Port state          = Port-channel Ag-Inuse
+Protocol            =   LACP
+
+Ports in the Port-channel:
+
+Index   Load   Port     EC state        No of bits
+------+------+------+------------------+-----------
+  0     00     Fa0/21   Active             0
+  0     00     Fa0/22   Active             0
+
+Time since last port bundled:    06d:21h:56m:53s    Fa0/22
+
+Group: 2
+----------
+                Port-channels in the group:
+                ---------------------------
+
+Port-channel: Po2    (Primary Aggregator)
+
+------------
+
+Age of the Port-channel   = 06d:21h:57m:14s
+Logical slot/port   = 1/1          Number of ports = 2
+HotStandBy port = null
+Port state          = Port-channel Ag-Inuse
+Protocol            =   LACP
+
+Ports in the Port-channel:
+
+Index   Load   Port     EC state        No of bits
+------+------+------+------------------+-----------
+  0     00     Fa0/23   Active             0
+  0     00     Fa0/24   Active             0
+
+Time since last port bundled:    06d:21h:57m:08s    Fa0/24
+
+*******************************************************************
+* SWITCH 3
+*******************************************************************
+
+DenverS3#show etherchannel port-channel
+                Channel-group listing:
+                ----------------------
+
+Group: 1
+----------
+                Port-channels in the group:
+                ---------------------------
+
+Port-channel: Po1    (Primary Aggregator)
+
+------------
+
+Age of the Port-channel   = 8d:22h:35m:22s
+Logical slot/port   = 2/1          Number of ports = 2
+HotStandBy port = null
+Port state          = Port-channel Ag-Inuse
+Protocol            =   LACP
+Port security       = Disabled
+
+Ports in the Port-channel:
+
+Index   Load   Port     EC state        No of bits
+------+------+------+------------------+-----------
+  0     00     Gi0/21   Passive            0
+  0     00     Gi0/22   Passive            0
+
+Time since last port bundled:    6d:21h:59m:30s    Gi0/22
+Time since last port Un-bundled: 6d:21h:59m:32s    Gi0/22
+
+Group: 2
+----------
+                Port-channels in the group:
+                ---------------------------
+
+Port-channel: Po2    (Primary Aggregator)
+
+------------
+
+Age of the Port-channel   = 8d:22h:32m:05s
+Logical slot/port   = 2/2          Number of ports = 2
+HotStandBy port = null
+Port state          = Port-channel Ag-Inuse
+Protocol            =   LACP
+Port security       = Disabled
+
+Ports in the Port-channel:
+
+Index   Load   Port     EC state        No of bits
+------+------+------+------------------+-----------
+  0     00     Gi0/23   Active             0
+  0     00     Gi0/24   Active             0
+
+Time since last port bundled:    6d:21h:04m:19s    Gi0/24
+Time since last port Un-bundled: 6d:21h:05m:14s    Gi0/24
+
+******************************************************************
+* SWITCH 5
+******************************************************************
+
+DenverS5#show etherchannel port-channel
+                Channel-group listing:
+                ----------------------

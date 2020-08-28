@@ -1,0 +1,243 @@
+*****************************************************************
+* Denver Router 1 configuration (Carl Radke)
+*****************************************************************
+DenverR1#show run
+Building configuration...
+
+
+Current configuration : 4199 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname DenverR1
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$nli8$Wfs/2GkFRW8eKAHduPzAY1
+!
+no aaa new-model
+dot11 syslog
+!
+!
+ip cef
+no ip dhcp use vrf connected
+ip dhcp excluded-address 192.168.105.253
+ip dhcp excluded-address 192.168.5.253
+ip dhcp excluded-address 192.168.25.253
+ip dhcp excluded-address 192.168.45.253
+ip dhcp excluded-address 192.168.65.253
+ip dhcp excluded-address 192.168.85.253
+ip dhcp excluded-address 192.168.105.1
+ip dhcp excluded-address 192.168.5.1
+ip dhcp excluded-address 192.168.25.1
+ip dhcp excluded-address 192.168.45.1
+ip dhcp excluded-address 192.168.65.1
+ip dhcp excluded-address 192.168.85.1
+ip dhcp excluded-address 192.168.105.254
+ip dhcp excluded-address 192.168.5.3
+ip dhcp excluded-address 192.168.25.3
+ip dhcp excluded-address 192.168.45.3
+ip dhcp excluded-address 192.168.65.3
+ip dhcp excluded-address 192.168.85.3
+ip dhcp excluded-address 192.168.105.11 192.168.105.16
+!
+ip dhcp pool IT
+   network 192.168.5.0 255.255.255.0
+   default-router 192.168.5.1
+   dns-server 8.8.8.8 1.1.1.1
+!
+ip dhcp pool VOIP
+   network 192.168.25.0 255.255.255.0
+   default-router 192.168.25.1
+   option 150 ip 192.168.222.1
+   dns-server 8.8.8.8 1.1.1.1
+!
+ip dhcp pool INTERNET
+   network 192.168.45.0 255.255.255.0
+   default-router 192.168.45.1
+   dns-server 8.8.8.8 1.1.1.1
+!
+ip dhcp pool ACCOUNTS
+   network 192.168.65.0 255.255.255.0
+   default-router 192.168.65.1
+   dns-server 8.8.8.8 1.1.1.1
+!
+ip dhcp pool OPERATIONS
+   network 192.168.85.0 255.255.255.0
+   default-router 192.168.85.1
+   dns-server 8.8.8.8 1.1.1.1
+!
+ip dhcp pool MANAGEMENT
+   network 192.168.105.0 255.255.255.0
+   default-router 192.168.105.1
+   dns-server 8.8.8.8 1.1.1.1
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+voice-card 0
+ no dspfarm
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+archive
+ log config
+  hidekeys
+!
+!
+!
+!
+ip ssh version 2
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ ip access-group blockICMP in
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.1005
+ encapsulation dot1Q 1005
+ ip address 192.168.254.16 255.255.255.254
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1.100
+ encapsulation dot1Q 100
+ ip address 192.168.5.253 255.255.255.0
+ vrrp 100 ip 192.168.5.1
+ vrrp 100 authentication cit341
+!
+interface FastEthernet0/1.120
+ encapsulation dot1Q 120
+ ip address 192.168.25.253 255.255.255.0
+ vrrp 120 ip 192.168.25.1
+ vrrp 120 priority 120
+ vrrp 120 authentication cit341
+!
+interface FastEthernet0/1.140
+ encapsulation dot1Q 140
+ ip address 192.168.45.253 255.255.255.0
+ vrrp 140 ip 192.168.45.1
+ vrrp 140 authentication cit341
+!
+interface FastEthernet0/1.160
+ encapsulation dot1Q 160
+ ip address 192.168.65.253 255.255.255.0
+ vrrp 160 ip 192.168.65.1
+ vrrp 160 priority 120
+ vrrp 160 authentication cit341
+!
+interface FastEthernet0/1.180
+ encapsulation dot1Q 180
+ ip address 192.168.85.253 255.255.255.0
+ vrrp 180 ip 192.168.85.1
+ vrrp 180 authentication cit341
+!
+interface FastEthernet0/1.200
+ encapsulation dot1Q 200
+ ip address 192.168.105.253 255.255.255.0
+ ip access-group ACL1 out
+ vrrp 200 ip 192.168.105.1
+ vrrp 200 priority 120
+ vrrp 200 authentication cit341
+!
+interface Serial0/0/0
+ no ip address
+ shutdown
+ no fair-queue
+ clock rate 2000000
+!
+interface Serial0/0/1
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+interface Serial0/1/0
+ no ip address
+ shutdown
+!
+router ospf 5
+ router-id 1.1.1.1
+ log-adjacency-changes
+ network 192.168.254.16 0.0.0.1 area 5
+!
+ip forward-protocol nd
+!
+!
+ip http server
+no ip http secure-server
+!
+ip access-list standard ACL1
+ permit 192.168.105.1
+ permit 192.168.105.11
+ permit 192.168.105.13
+ permit 192.168.105.12
+ permit 192.168.105.15
+ permit 192.168.105.14
+ permit 192.168.105.16
+ permit 192.168.105.253
+ permit 192.168.105.254
+!
+ip access-list extended blockICMP
+ deny   icmp any any
+ permit ip any any
+!
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+line aux 0
+line vty 0 4
+ login
+ transport input ssh
+line vty 5 15
+ login
+ transport input ssh
+!
+scheduler allocate 20000 1000
+ntp server 172.16.99.1
+!
+end
