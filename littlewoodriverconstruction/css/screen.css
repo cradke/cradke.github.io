@@ -1,0 +1,74 @@
+/*This is for the littlewoodriverconstruction site and screened devices*/
+
+/* *****************************************************
+* CSS Table of Contents
+* 1. Imports
+* 2. General Styles
+* 3. Mobile Styles
+* 4. Large Screen Styles
+***************************************************** */
+
+/**************************************************
+* 1. Imports
+**************************************************/
+
+
+/**************************************************
+* 2. General Styles
+**************************************************/
+.images {
+    width: 50%;
+    align-content: flex-end;
+}
+
+    .contain {
+        display: flex;
+    }
+
+#navBar {
+    display:flex;
+    font-size: 20px;
+    background-color:burlywood;
+}
+
+.navItems {
+    list-style: none;
+    padding-right: 10px;
+}
+
+#nav {
+    margin-top: -24px
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding-bottom: 400px;
+
+    
+}
+
+    main{        
+        padding-top: 280px;
+
+    }
+
+
+/**************************************************
+* 3. Mobile Styles
+**************************************************/
+
+
+/**************************************************
+* 4. Large Screen Styles
+**************************************************/
+@media screen and (min-width: 760px){
+    .images {
+    width: 35%;
+}
+    
+    .contain {
+        display: flex;
+    }
+}
