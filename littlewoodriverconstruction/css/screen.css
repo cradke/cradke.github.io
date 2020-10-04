@@ -17,12 +17,16 @@
 * 2. General Styles
 **************************************************/
 .images {
-    width: 50%;
+    width: 100%;
     align-content: flex-end;
 }
 
     .contain {
         display: flex;
+        background-color: beige;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 #navBar {
@@ -36,23 +40,38 @@
     padding-right: 10px;
 }
 
+/* Move Navbar directly beneath company logo */
 #nav {
     margin-top: -24px
 }
 
+/* Make header static */
 header {
     width: 100%;
     position: fixed;
+    float: left;
     top: 0;
-    padding-bottom: 400px;
-
-    
+    background-color: white;  
 }
 
+/* Display content below static navBar */
     main{        
-        padding-top: 280px;
+        padding-top: 202px;
 
     }
+
+/* reduce logo size */
+#logo {
+    max-width: 50%;
+}
+
+main {
+    background-color: darkgoldenrod
+}
+
+.images {
+    width 50%;
+}
 
 
 /**************************************************
@@ -64,6 +83,12 @@ header {
 * 4. Large Screen Styles
 **************************************************/
 @media screen and (min-width: 760px){
+    /* Display content below static navBar */
+    main{        
+        padding-top: 275px;
+
+    }
+    /*
     .images {
     width: 35%;
 }
@@ -71,4 +96,5 @@ header {
     .contain {
         display: flex;
     }
+    */
 }
