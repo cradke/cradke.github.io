@@ -21,22 +21,22 @@
     align-content: flex-end;
 }
 
-    .contain {
-        display: flex;
-        background-color: beige;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.contain {
+    display: flex;
+    background-color: beige;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 /* Horizontal navBAr with background color on top of banner */
 #navBar {
-    display:flex;
-    background-color:burlywood;
-    position:relative;
+    display: flex;
+    background-color: burlywood;
+    position: relative;
     z-index: 1;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .navItems {
@@ -61,14 +61,14 @@ header {
 }
 
 /* Display content below static navBar */
-    main{        
-        padding-top: 202px;
+main {
+    padding-top: 202px;
 
-    }
+}
 
 /* reduce logo size */
 #logo {
-    max-width: 50%;
+    max-width: 80%;
 }
 
 main {
@@ -88,39 +88,46 @@ main {
 /**************************************************
 * 3. Mobile Styles
 **************************************************/
-        /* Slideshow container */
-        .slideshow-container {
-            max-width: 500px;
-            position: inherit;
-            margin: auto;
-        }
+/* Slideshow container */
+.slideshow-container {
+    max-width: 500px;
+    position: inherit;
+    margin: auto;
+}
 
 
 /**************************************************
 * 4. Large Screen Styles
 **************************************************/
-@media screen and (min-width: 760px){
+/* Full Screen */
+@media screen and (min-width: 1250px) {
     #logo {
-    max-width: 30%;
-}
-  /* Move Navbar directly beneath company logo */
-#nav {
-    margin-top: -50px
-}   
-    
-    /* Display content below static navBar */
-    main{        
-        padding-top: 190px;
-
+        max-width: 30%;
     }
-    
-            /* Slideshow container */
-        .slideshow-container {
-            max-width: 750px;
-            position: inherit;
-            margin: auto;
-        }
-    
+
+    /* Move Navbar directly beneath company logo */
+    #nav {
+        margin-top: -50px
+    }
+
+    /* increase link font size */
+    #navBar {
+        font-size: 20px;
+    }
+
+    /* Display content below static navBar */
+    main {
+        padding-top: 190px;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 700px;
+        position: inherit;
+        margin: auto;
+    }
+
+
     /*
     .images {
     width: 30%;
@@ -130,4 +137,62 @@ main {
         display: flex;
     }
     */
+}
+
+/* Mid screen */
+@media screen and (max-width: 1249px) {
+    @media screen and (min-width: 800px) {
+            #logo {
+        max-width: 30%;
+    }
+
+        /* Move Navbar directly beneath company logo */
+        #nav {
+            margin-top: -35px;
+        }
+
+        /* increase link font size */
+        #navBar {
+            font-size: 18px;
+        }
+
+        /* Display content below static navBar */
+        main {
+            padding-top: 175px;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 600px;
+            position: inherit;
+            margin: auto;
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 799px) {
+    @media screen and (min-width: 500px) {
+        /* Increase logo size */
+        #logo {
+            max-width: 50%;
+        }
+/* Set link size */
+        #navBar {
+            font-size: 16px;
+        }
+        
+                /* Display content below static navBar */
+        main {
+            padding-top: 160px;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 550px;
+            position: inherit;
+            margin: auto;
+        }
+    }
 }
