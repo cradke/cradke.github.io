@@ -93,7 +93,7 @@
         }
 
         /* Fading animation. Disabled for functionality*/
-      /*  .fade {
+        /*  .fade {
             -webkit-animation-name: fade;
             -webkit-animation-duration: 1.5s;
             animation-name: fade;
@@ -156,19 +156,19 @@
             <div class="mySlides fade">
                 <div class="numbertext">1 / 3</div>
                 <img src="images/hottub2.jpg" style="width:100%">
-             <!--   <div class="text">Caption Text</div> -->
+                <!--   <div class="text">Caption Text</div> -->
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">2 / 3</div>
                 <img src="images/potato2.jpg" style="width:100%">
-            <!--    <div class="text">Caption Two</div> -->
+                <!--    <div class="text">Caption Two</div> -->
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">3 / 3</div>
                 <img src="images/tree.jpg" style="width:100%">
-             <!--   <div class="text">Caption Three</div> -->
+                <!--   <div class="text">Caption Three</div> -->
             </div>
 
             <!-- Next and previous buttons -->
@@ -177,38 +177,47 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
 -->
         </div>
-        
+
 
         <!-- The dots/circles -->
-   <!--     <div style="text-align:center">
+        <!--     <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     -->
         <div class="contain">
-            <div class="info">
-                <h2>Our Values</h2>
+            <div class="info" id="info1">
+                <h2>Our Values:</h2>
                 <ol>
-                <li>Hard work</li>
+                    <li>Hard work</li>
+                    <li>Accountability</li>
                 </ol>
             </div>
 
-            <div>
                 <img src="images/staple.jpg" class="images">
-            </div>
+
         </div>
 
 
-
-        <div class="contain">
-            <div class="info">
-                <h2>Title</h2>
-                <p>fiuwepfbsjancjwepiufhiuabfjdcniowejfipsdanjcdsuwpbndjnnnc dskjniwe</p>
+        
+        <div class="contain" id="contain2">
+            <div class="info" >
+                <h2>We Remodel:</h2>
+                <ul>
+                    <li>Bathrooms</li>
+                    <li>Kitchens</li>
+                    <li>Floors</li>
+                    <li>drywall</li>
+                    <li>roofs</li>
+                </ul>
             </div>
 
             <img src="images/siding.JPG" class="images">
+            
         </div>
+        
+        <br>
 
     </main>
 
@@ -218,18 +227,20 @@
 
     <script>
         var slideIndex = 0;
-showSlides();
+        showSlides();
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
-}
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
     </script>
 </body></html>

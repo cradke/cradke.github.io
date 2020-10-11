@@ -17,8 +17,7 @@
 * 2. General Styles
 **************************************************/
 .images {
-    width: 100%;
-    align-content: flex-end;
+    width: 40%;
 }
 
 .contain {
@@ -27,8 +26,15 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
+/* padding beneath main content */
+#contain2 {
+    padding-bottom: 5px;
+}
 
 /* Horizontal navBAr with background color on top of banner */
 #navBar {
@@ -76,10 +82,6 @@ main {
     margin-top: ;
 }
 
-.images {
-    width: 50%;
-}
-
 .info {
     width: 100%;
 }
@@ -95,6 +97,9 @@ main {
     margin: auto;
 }
 
+.contain {
+    flex-wrap: wrap;
+}
 
 /**************************************************
 * 4. Large Screen Styles
@@ -127,24 +132,30 @@ main {
         margin: auto;
     }
 
+    .contain {
+        flex-wrap: nowrap;
+        
+    }
 
-    /*
+    /* Size content images */
     .images {
-    width: 30%;
+        width: 30%;
+    }
+    
+    /* Set approprite text size for info */
+    .info {
+    font-size: 200%;
 }
     
-    .contain {
-        display: flex;
-    }
-    */
+
 }
 
 /* Mid screen */
 @media screen and (max-width: 1249px) {
     @media screen and (min-width: 800px) {
-            #logo {
-        max-width: 30%;
-    }
+        #logo {
+            max-width: 30%;
+        }
 
         /* Move Navbar directly beneath company logo */
         #nav {
@@ -168,22 +179,28 @@ main {
             margin: auto;
         }
 
+        .contain {
+            flex-wrap: nowrap;
+        }
+
 
     }
 }
 
 @media screen and (max-width: 799px) {
     @media screen and (min-width: 500px) {
+
         /* Increase logo size */
         #logo {
             max-width: 50%;
         }
-/* Set link size */
+
+        /* Set link size */
         #navBar {
             font-size: 16px;
         }
-        
-                /* Display content below static navBar */
+
+        /* Display content below static navBar */
         main {
             padding-top: 160px;
         }
@@ -193,6 +210,10 @@ main {
             max-width: 550px;
             position: inherit;
             margin: auto;
+        }
+
+        .contain {
+            flex-wrap: nowrap;
         }
     }
 }
