@@ -105,6 +105,15 @@ main {
     width: 100%
 }
 
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#remodels {
+    font-size: 20px;
+}
+
 /**************************************************
 * 4. Large Screen Styles
 **************************************************/
@@ -188,10 +197,10 @@ main {
             flex-wrap: nowrap;
             width: 90%;
         }
-        
-.images {
-    width: 40%;
-}
+
+        .images {
+            width: 40%;
+        }
     }
 }
 
@@ -224,9 +233,18 @@ main {
             flex-wrap: nowrap;
             width: 90%;
         }
-        
+
         .images {
-    width: 40%;
+            width: 40%;
+        }
+
+        h2 {
+    text-align: left;
+    font-size: 24px;
+}
+
+#remodels {
+    font-size: 16px;
 }
     }
 }
