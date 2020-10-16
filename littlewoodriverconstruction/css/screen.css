@@ -91,7 +91,7 @@ main {
 **************************************************/
 /* Slideshow container */
 .slideshow-container {
-    max-width: 500px;
+    max-width: 100%;
     position: inherit;
     margin: auto;
 }
@@ -107,13 +107,13 @@ main {
 
 h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 200%;
 }
 
-#remodels {
-    font-size: 20px;
-    text-align: center;
-}
+
+
+
+
 
 /**************************************************
 * 4. Large Screen Styles
@@ -141,9 +141,12 @@ h2 {
 
     /* Slideshow container */
     .slideshow-container {
-        max-width: 700px;
+        max-width: 90%;
         position: inherit;
         margin: auto;
+        background-color: chocolate;
+        padding-left: 300px;
+        padding-right: 300px;
     }
 
     .contain {
@@ -155,11 +158,6 @@ h2 {
     /* Size content images */
     .images {
         width: 30%;
-    }
-
-    /* Set approprite text size for info */
-    .info {
-        font-size: 200%;
     }
 
 
@@ -189,7 +187,7 @@ h2 {
 
         /* Slideshow container */
         .slideshow-container {
-            max-width: 600px;
+            max-width: 90%;
             position: inherit;
             margin: auto;
         }
@@ -202,6 +200,7 @@ h2 {
         .images {
             width: 40%;
         }
+        
     }
 }
 
@@ -225,7 +224,7 @@ h2 {
 
         /* Slideshow container */
         .slideshow-container {
-            max-width: 550px;
+            max-width: 90%;
             position: inherit;
             margin: auto;
         }
@@ -239,13 +238,4 @@ h2 {
             width: 40%;
         }
 
-        h2 {
-    text-align: left;
-    font-size: 24px;
-}
-
-#remodels {
-    font-size: 16px;
-}
-    }
 }
