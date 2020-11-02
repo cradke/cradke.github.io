@@ -141,17 +141,14 @@ h2 {
 
     /* Slideshow container */
     .slideshow-container {
-        max-width: 90%;
+        max-width: 50%;
         position: inherit;
         margin: auto;
-        background-color: chocolate;
-        padding-left: 300px;
-        padding-right: 300px;
     }
 
     .contain {
         flex-wrap: nowrap;
-        width: 90%;
+        width: 50%;
 
     }
 
