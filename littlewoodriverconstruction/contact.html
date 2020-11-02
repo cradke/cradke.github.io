@@ -11,24 +11,39 @@
         p {
             text-align: center;
         }
-        
+
         .contain {
             padding-bottom: 5px;
         }
-        
+
         main {
             padding-bottom: 5px;
         }
-        
+
         @media screen and (min-width: 1250px) {
             .images {
                 width: 40%;
             }
+
             .contain {
                 width: 90%;
+                flex-direction: row-reverse;
             }
+
             .info {
                 font-size: 150%;
+            }
+        }
+
+        @media screen and (max-width: 1249px) {
+            @media screen and (min-width: 800px) {
+                .info {
+                    font-size: 125%;
+                }
+
+                .contain {
+                    flex-direction: row-reverse;
+                }
             }
         }
 
@@ -37,8 +52,13 @@
                 .images {
                     width: 50%
                 }
+
+                .contain {
+                    flex-direction: row-reverse;
+                }
             }
         }
+
     </style>
 </head>
 
@@ -70,7 +90,6 @@
 
     <main>
         <div class="contain">
-            <img src="images/tree2.jpg" class="images">
 
             <div class="info">
 
@@ -82,10 +101,10 @@
 
                 <p>Or reach us by phone <a href="tel:+12082608902">208-260-8902</a></p>
 
-
             </div>
-            
-            
+
+            <img src="images/tree2.jpg" class="images">
+
         </div>
 
 
@@ -96,4 +115,6 @@
 
     </footer>
 
-</body></html>
+</body>
+
+</html>
