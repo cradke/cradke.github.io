@@ -81,6 +81,10 @@ main {
     margin-top: ;
 }
 
+body {
+    background-color: grey;
+}
+
 .info {
     width: 100%;
 }
@@ -197,7 +201,7 @@ h2 {
         .images {
             width: 40%;
         }
-        
+
     }
 }
 
@@ -235,4 +239,4 @@ h2 {
             width: 40%;
         }
 
-}
+    }

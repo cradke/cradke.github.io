@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sudoku Solver</title>
+    <style>
+        button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 12px;
+            border: 3px solid green;
+            position: relative;
+            left: 515px;
+        }
+
+        .box {
+            /* add borders around and between boxes */
+            border-style: solid;
+        }
+
+        section {
+            /* center the sudoku puzzle */
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .row {
+            /* Stop wrapping of boxes on a small screen */
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+
+        main {
+            /* Put main into a flex-box so it can be centered */
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+            background-color: blueviolet;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+
+        h1 {
+            /* center align the header */
+            text-align: center;
+        }
+
+
+        input {
+            /* Decrease size of input boxes */
+            width: 25px;
+        }
+
+        body {
+            background-color: dodgerblue;
+        }
+
+        /* style for large screens */
+        @media screen and (min-width: 540px) {
+            input {
+                width: 50px;
+                height: 50px;
+                font-size: 400%;
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Solve Sudoku</h1>
+    </header>
+
+    <main>
+        <!-- Durant-->
+        <section class="boxRow">
+            <div class="box">
+                <div class="row">
+                    <input type="number" id="A1" min="1" max="9">
+                    <input type="number" id="A2" min="1" max="9">
+                    <input type="number" id="A3" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="B1" min="1" max="9">
+                    <input type="number" id="B2" min="1" max="9">
+                    <input type="number" id="B3" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="C1" min="1" max="9">
+                    <input type="number" id="C2" min="1" max="9">
+                    <input type="number" id="C3" min="1" max="9">
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="row">
+                    <input type="number" id="A4" min="1" max="9">
+                    <input type="number" id="A5" min="1" max="9">
+                    <input type="number" id="A6" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="B4" min="1" max="9">
+                    <input type="number" id="B5" min="1" max="9">
+                    <input type="number" id="B6" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="C4" min="1" max="9">
+                    <input type="number" id="C5" min="1" max="9">
+                    <input type="number" id="C6" min="1" max="9">
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="row">
+                    <input type="number" id="A7" min="1" max="9">
+                    <input type="number" id="A8" min="1" max="9">
+                    <input type="number" id="A9" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="B7" min="1" max="9">
+                    <input type="number" id="B8" min="1" max="9">
+                    <input type="number" id="B9" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="C7" min="1" max="9">
+                    <input type="number" id="C8" min="1" max="9">
+                    <input type="number" id="C9" min="1" max="9">
+                </div>
+            </div>
+        </section>
+
+        <section class="boxRow">
+            <div class="box">
+                <div class="row">
+                    <input type="number" id="D1" min="1" max="9">
+                    <input type="number" id="D2" min="1" max="9">
+                    <input type="number" id="D3" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="E1" min="1" max="9">
+                    <input type="number" id="E2" min="1" max="9">
+                    <input type="number" id="E3" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="F1" min="1" max="9">
+                    <input type="number" id="F2" min="1" max="9">
+                    <input type="number" id="F3" min="1" max="9">
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="row">
+                    <input type="number" id="D4" min="1" max="9">
+                    <input type="number" id="D5" min="1" max="9">
+                    <input type="number" id="D6" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="E4" min="1" max="9">
+                    <input type="number" id="E5" min="1" max="9">
+                    <input type="number" id="E6" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="F4" min="1" max="9">
+                    <input type="number" id="F5" min="1" max="9">
+                    <input type="number" id="F6" min="1" max="9">
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="row">
+                    <input type="number" id="D7" min="1" max="9">
+                    <input type="number" id="D8" min="1" max="9">
+                    <input type="number" id="D9" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="E7" min="1" max="9">
+                    <input type="number" id="E8" min="1" max="9">
+                    <input type="number" id="E9" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="F7" min="1" max="9">
+                    <input type="number" id="F8" min="1" max="9">
+                    <input type="number" id="F9" min="1" max="9">
+                </div>
+            </div>
+        </section>
+
+        <section class="boxRow">
+            <div class="box">
+                <div class="row">
+                    <input type="number" id="G1" min="1" max="9">
+                    <input type="number" id="G2" min="1" max="9">
+                    <input type="number" id="G3" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="H1" min="1" max="9">
+                    <input type="number" id="H2" min="1" max="9">
+                    <input type="number" id="H3" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="I1" min="1" max="9">
+                    <input type="number" id="I2" min="1" max="9">
+                    <input type="number" id="I3" min="1" max="9">
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="row">
+                    <input type="number" id="G4" min="1" max="9">
+                    <input type="number" id="G5" min="1" max="9">
+                    <input type="number" id="G6" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="H4" min="1" max="9">
+                    <input type="number" id="H5" min="1" max="9">
+                    <input type="number" id="H6" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="I4" min="1" max="9">
+                    <input type="number" id="I5" min="1" max="9">
+                    <input type="number" id="I6" min="1" max="9">
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="row">
+                    <input type="number" id="G7" min="1" max="9">
+                    <input type="number" id="G8" min="1" max="9">
+                    <input type="number" id="G9" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="H7" min="1" max="9">
+                    <input type="number" id="H8" min="1" max="9">
+                    <input type="number" id="H9" min="1" max="9">
+                </div>
+
+                <div class="row">
+                    <input type="number" id="I7" min="1" max="9">
+                    <input type="number" id="I8" min="1" max="9">
+                    <input type="number" id="I9" min="1" max="9">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <button onClick="start()">Solve</button>
+        <button onClick="reset()">Reset</button>
+    </footer>
+
+    <script>
+        // Declare an arrary of user input that will remain static
+        let input = new Array();
+        // Declare an array of the puzzle that will be dynamic
+        let puzzle = new Array();
+        // Declare an array of element IDs. Will facilitate the use of loops to reduce code.
+        let locations = new Array();
+
+
+
+        // run get locations to fill the ocations array
+        getLocations();
+
+        /*  Carl   */
+        function start() {
+
+            // run get input to build the input array
+            getInput();
+
+            // set the puzzle array equal to the input array
+            for (let i = 1; i < input.length; i++) {
+                puzzle[i] = input[i];
+            }
+
+            solve();
+
+            output();
+
+            turnRed();
+        }
+
+
+        // Wesley
+        function getLocations() {
+            console.log('getLocations function called');
+            locations[1] = document.getElementById("A1");
+            locations[2] = document.getElementById("A2");
+            locations[3] = document.getElementById("A3");
+            locations[4] = document.getElementById("A4");
+            locations[5] = document.getElementById("A5");
+            locations[6] = document.getElementById("A6");
+            locations[7] = document.getElementById("A7");
+            locations[8] = document.getElementById("A8");
+            locations[9] = document.getElementById("A9");
+            locations[10] = document.getElementById("B1");
+            locations[11] = document.getElementById("B2");
+            locations[12] = document.getElementById("B3");
+            locations[13] = document.getElementById("B4");
+            locations[14] = document.getElementById("B5");
+            locations[15] = document.getElementById("B6");
+            locations[16] = document.getElementById("B7");
+            locations[17] = document.getElementById("B8");
+            locations[18] = document.getElementById("B9");
+            locations[19] = document.getElementById("C1");
+            locations[20] = document.getElementById("C2");
+            locations[21] = document.getElementById("C3");
+            locations[22] = document.getElementById("C4");
+            locations[23] = document.getElementById("C5");
+            locations[24] = document.getElementById("C6");
+            locations[25] = document.getElementById("C7");
+            locations[26] = document.getElementById("C8");
+            locations[27] = document.getElementById("C9");
+            locations[28] = document.getElementById("D1");
+            locations[29] = document.getElementById("D2");
+            locations[30] = document.getElementById("D3");
+            locations[31] = document.getElementById("D4");
+            locations[32] = document.getElementById("D5");
+            locations[33] = document.getElementById("D6");
+            locations[34] = document.getElementById("D7");
+            locations[35] = document.getElementById("D8");
+            locations[36] = document.getElementById("D9");
+            locations[37] = document.getElementById("E1");
+            locations[38] = document.getElementById("E2");
+            locations[39] = document.getElementById("E3");
+            locations[40] = document.getElementById("E4");
+            locations[41] = document.getElementById("E5");
+            locations[42] = document.getElementById("E6");
+            locations[43] = document.getElementById("E7");
+            locations[44] = document.getElementById("E8");
+            locations[45] = document.getElementById("E9");
+            locations[46] = document.getElementById("F1");
+            locations[47] = document.getElementById("F2");
+            locations[48] = document.getElementById("F3");
+            locations[49] = document.getElementById("F4");
+            locations[50] = document.getElementById("F5");
+            locations[51] = document.getElementById("F6");
+            locations[52] = document.getElementById("F7");
+            locations[53] = document.getElementById("F8");
+            locations[54] = document.getElementById("F9");
+            locations[55] = document.getElementById("G1");
+            locations[56] = document.getElementById("G2");
+            locations[57] = document.getElementById("G3");
+            locations[58] = document.getElementById("G4");
+            locations[59] = document.getElementById("G5");
+            locations[60] = document.getElementById("G6");
+            locations[61] = document.getElementById("G7");
+            locations[62] = document.getElementById("G8");
+            locations[63] = document.getElementById("G9");
+            locations[64] = document.getElementById("H1");
+            locations[65] = document.getElementById("H2");
+            locations[66] = document.getElementById("H3");
+            locations[67] = document.getElementById("H4");
+            locations[68] = document.getElementById("H5");
+            locations[69] = document.getElementById("H6");
+            locations[70] = document.getElementById("H7");
+            locations[71] = document.getElementById("H8");
+            locations[72] = document.getElementById("H9");
+            locations[73] = document.getElementById("I1");
+            locations[74] = document.getElementById("I2");
+            locations[75] = document.getElementById("I3");
+            locations[76] = document.getElementById("I4");
+            locations[77] = document.getElementById("I5");
+            locations[78] = document.getElementById("I6");
+            locations[79] = document.getElementById("I7");
+            locations[80] = document.getElementById("I8");
+            locations[81] = document.getElementById("I9");
+        }
+
+        // make sure the input is valid for the Sudoku puzzle
+        // Bryan
+        function validateByRow(p) {
+            console.log('validateByRow function called');
+            // start at the left end of the row
+            let r = p;
+            while ((r % 9) != 1) {
+                r--;
+            }
+
+            // check each square in the row
+            for (let i = 1; i <= 9; i++) {
+                if (r != p && puzzle[r] == puzzle[p]) {
+                    return false;
+                }
+                // added
+                r++;
+            }
+
+            // if you got here, then it's valid by row
+            return true;
+        }
+
+        function validateByColumn(p) {
+            console.log('validateByColumn function called');
+            // start at the top of the column
+            let c = p % 9;
+            if (c == 0) { // we don't want to access [0]
+                c = 9;
+            }
+
+            // check each square in the column
+            while (c <= 81) {
+                if (c != p && puzzle[c] == puzzle[p]) {
+                    return false;
+                }
+                else {
+                    c += 9;
+                }
+            }
+
+            // if you got here, then it's valid by column
+            return true;
+        }
+
+        // each section is 3x3
+        function validateBySection(p) {
+            console.log('validateBySection function called');
+            // start in the left column and top row of the section
+            let s = p;
+            while ((s % 3) != 1) {
+                s--;
+            }
+            while ((s % 27) != 1 && (s % 27) != 4 && (s % 27) != 7) {
+                s -= 9;
+            }
+
+            // check each square in the section
+            for (let j = 0; j < 3; j++) {
+                for (let i = 0; i < 3; i++) {
+                    if (s != p && puzzle[s] == puzzle[p]) {
+                        return false;
+                    }
+                    // else {
+                    s++;
+                    //  }
+                }
+                s += 6;
+            }
+
+            // if you got here, then it's valid by section
+            return true;
+        }
+
+        function validate(p) {
+            console.log('validate function called ' + p);
+            if (!validateByRow(p) || !validateByColumn(p) || !validateBySection(p)) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        // Fill the input array with user input
+        function getInput() {
+            console.log('getInput function called');
+            for (let i = 1; i < locations.length; i++) {
+                input[i] = locations[i].value;
+            }
+
+            // This is loop to verify that getInput is working correctly for debugging only
+            for (let i = 1; i < input.length; i++) {
+                console.log('input[' + i + '] = ' + input[i]);
+            }
+        }
+
+        // This function is incomplete
+        function output() {
+            console.log('output function called');
+
+            for (let i = 1; i < locations.length; i++) {
+                locations[i].value = puzzle[i].toString();
+            }
+            /*
+            let num = 6
+            document.getElementById("A1").innerHTML = num.toString();
+            document.getElementById("A2").innerHTML = 6;
+            */
+
+
+        }
+
+        // Turn all the numbers input by the user red
+        function turnRed() {
+            console.log('turnRed function called');
+
+            for (let i = 1; i < locations.length; i++) {
+                if (input[i] == '') {
+                    locations[i].style.color = "red";
+                }
+            }
+        }
+
+        // set all spaces back to blank
+        function reset() {
+            console.log("reset function called")
+            for (let i = 1; i < locations.length; i++) {
+                locations[i].value = '';
+                input[i] = null;
+                puzzle[i] = null;
+                locations[i].style.color = "black";
+            }
+            //  document.getElementById("A1").innerHTML = '';
+        }
+
+        let count = 1;
+        function solve() {
+            console.log('solve function called');
+            // Begin at place 1
+            let p = 1;
+            // Cycle through every place in the Sudoku puzzle
+            while (p < input.length /*&& count < 3000*/) {
+                // If the place is blank fill it in as a 1
+                if (puzzle[p] == '') {
+                    puzzle[p] = 1;
+                }
+                // If the value is equal to what the user put into the place move on to the next
+                else if (puzzle[p] == input[p]) {
+                    p++;
+                }
+                else {
+                    // If the place has a valid number move on to the next place
+                    if (validate(p)) {
+                        p++;
+                    }
+                    // If the number is invalid
+                    else {
+
+                        if (puzzle[p] < 9) {
+                            puzzle[p]++;
+                        } else {
+                            do {
+                                puzzle[p] = '';
+
+                                p--;
+                                while (puzzle[p] == input[p]) {
+                                    p--;
+                                }
+
+                                puzzle[p]++;
+
+                            } while (puzzle[p] >= 9 && puzzle[p] != input[p])
+                        }
+
+                    }
+
+
+                }
+                count++;
+            }
+        }
+    </script>
+</body>
+
+</html>
