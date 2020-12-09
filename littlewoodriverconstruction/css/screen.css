@@ -28,12 +28,14 @@
     padding-top: 5px;
     padding-right: 5px;
     padding-left: 5px;
+    padding-bottom: 5px;
 }
 
-/* padding beneath main content */
+/* padding beneath main content 
 #contain2 {
     padding-bottom: 5px;
 }
+*/
 
 /* Horizontal navBAr with background color on top of banner */
 #navBar {
@@ -82,7 +84,7 @@ main {
 }
 
 body {
-    background-color: grey;
+    background-color: darkkhaki;
 }
 
 .info {
@@ -125,12 +127,12 @@ h2 {
 /* Full Screen */
 @media screen and (min-width: 1250px) {
     #logo {
-        max-width: 30%;
+        max-width: 20%;
     }
 
     /* Move Navbar directly beneath company logo */
     #nav {
-        margin-top: -50px
+        margin-top: -40px
     }
 
     /* increase link font size */
@@ -140,25 +142,25 @@ h2 {
 
     /* Display content below static navBar */
     main {
-        padding-top: 190px;
+        padding-top: 150px;
     }
 
     /* Slideshow container */
     .slideshow-container {
-        max-width: 50%;
+        max-width: 55%;
         position: inherit;
         margin: auto;
     }
 
     .contain {
         flex-wrap: nowrap;
-        width: 50%;
+        width: 55%;
 
     }
 
     /* Size content images */
     .images {
-        width: 30%;
+        width: 50%;
     }
 
 

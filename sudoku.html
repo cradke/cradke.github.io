@@ -289,8 +289,6 @@
         // Declare an array of element IDs. Will facilitate the use of loops to reduce code.
         let locations = new Array();
 
-
-
         // run get locations to fill the ocations array
         getLocations();
 
@@ -503,12 +501,6 @@
             for (let i = 1; i < locations.length; i++) {
                 locations[i].value = puzzle[i].toString();
             }
-            /*
-            let num = 6
-            document.getElementById("A1").innerHTML = num.toString();
-            document.getElementById("A2").innerHTML = 6;
-            */
-
 
         }
 
@@ -532,7 +524,6 @@
                 puzzle[i] = null;
                 locations[i].style.color = "black";
             }
-            //  document.getElementById("A1").innerHTML = '';
         }
 
         let count = 1;
@@ -565,22 +556,14 @@
                                 if (puzzle[p] != input[p]) {
                                     puzzle[p] = '';
                                 }
-                                
+
                                 p--;
-
-
-                              /*  while (puzzle[p] == input[p]) {
-                                    p--;
-                                } */
-
-                                
 
                             } while (puzzle[p] >= 9 || puzzle[p] == input[p])
                             puzzle[p]++;
                         }
 
                     }
-
 
                 }
                 count++;
