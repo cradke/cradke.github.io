@@ -562,16 +562,21 @@
                             puzzle[p]++;
                         } else {
                             do {
-                                puzzle[p] = '';
-
-                                p--;
-                                while (puzzle[p] == input[p]) {
-                                    p--;
+                                if (puzzle[p] != input[p]) {
+                                    puzzle[p] = '';
                                 }
+                                
+                                p--;
 
-                                puzzle[p]++;
 
-                            } while (puzzle[p] >= 9 && puzzle[p] != input[p])
+                              /*  while (puzzle[p] == input[p]) {
+                                    p--;
+                                } */
+
+                                
+
+                            } while (puzzle[p] >= 9 || puzzle[p] == input[p])
+                            puzzle[p]++;
                         }
 
                     }
