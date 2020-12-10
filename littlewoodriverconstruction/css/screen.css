@@ -69,8 +69,15 @@ header {
 
 /* Display content below static navBar */
 main {
-    padding-top: 202px;
+    padding-top: 150px;
 
+}
+
+footer {
+    text-align: center;
+    background-color: darkgoldenrod;
+    padding: 5px;
+    margin-top: 5px;
 }
 
 /* reduce logo size */
@@ -208,7 +215,7 @@ h2 {
 }
 
 @media screen and (max-width: 799px) {
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 550px) {
 
         /* Increase logo size */
         #logo {
@@ -220,7 +227,6 @@ h2 {
             font-size: 16px;
         }
 
-        /* Display content below static navBar */
         main {
             padding-top: 160px;
         }
