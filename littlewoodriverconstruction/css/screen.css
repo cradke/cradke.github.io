@@ -62,22 +62,32 @@
 header {
     width: 100%;
     position: fixed;
-    float: left;
-    top: 0;
+    position:sticky;
+    top: 0;   
     background-color: white;
 }
 
 /* Display content below static navBar */
 main {
-    padding-top: 150px;
-
+    padding-top: 15px;
+    background-color: darkgoldenrod;
 }
 
 footer {
     text-align: center;
     background-color: darkgoldenrod;
-    padding: 5px;
+    padding: 1px;
     margin-top: 5px;
+}
+
+#footerText {
+    background-color: beige;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
 }
 
 /* reduce logo size */
@@ -85,10 +95,6 @@ footer {
     max-width: 80%;
 }
 
-main {
-    background-color: darkgoldenrod;
-    margin-top: ;
-}
 
 body {
     background-color: darkkhaki;
@@ -147,10 +153,11 @@ h2 {
         font-size: 20px;
     }
 
-    /* Display content below static navBar */
+    /* Display content below static navBar 
     main {
         padding-top: 150px;
     }
+    */
 
     /* Slideshow container */
     .slideshow-container {
@@ -190,7 +197,7 @@ h2 {
             font-size: 18px;
         }
 
-        /* Display content below static navBar */
+        /* Display content below static navBar 
         main {
             padding-top: 175px;
         }
@@ -227,6 +234,7 @@ h2 {
             font-size: 16px;
         }
 
+        /*
         main {
             padding-top: 160px;
         }
